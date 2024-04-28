@@ -18,8 +18,7 @@ int main()
     struct str
     {
         int num;
-        char form[200];
-        char price[999];
+        char form[200], price[999]; //изменено объявление переменных
         struct vol
         {
             char bytes[800], mbytes[30];
