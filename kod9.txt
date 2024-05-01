@@ -4,6 +4,7 @@
 #include <conio.h>
 #include <locale.h>
 #include <windows.h>
+
 int main()
 {
     setlocale(LC_ALL, "Russian");
@@ -23,7 +24,7 @@ int main()
         struct vol
         {
             char bytes[800], mbytes[30];
-        }vol;
+        } vol;
     };
     int i;
 
@@ -37,6 +38,15 @@ int main()
         printf("Введите цену %d диска : ", i + 1);
         scanf("%[^\n]d", cdiscs[i].price);
         getchar();
+
+        // Проверка на положительность первой объявленной переменной
+        int price = atoi(cdiscs[i].price);
+        if (price <= 0)
+        {
+            printf("Цена диска должна быть положительной.\n");
+            return 1;
+        }
+
         printf("Введите ёмкость в байтах %d диска: ", i + 1);
         scanf("%[^\n]d", cdiscs[i].vol.bytes);
         getchar();
