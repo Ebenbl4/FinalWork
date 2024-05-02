@@ -15,17 +15,16 @@ int main()
         "| # | Формат контента |     Цена      |----------+---------|\n"
         "|   |                 |               |  байты   | м.байты |\n"
         "+---+-----------------+---------------+----------+---------+\n";
-    struct str
+    struct str // основная структура
     {
         int num;
-        char form[200];
-        char price[999];
-        struct vol
+        char form[200], price[999]; //изменено объявление переменных
+        struct vol // подструктура
         {
             char bytes[800], mbytes[30];
         }vol;
     };
-    int i;
+    int i; // счётчик элементов структуры
 
     struct str cdiscs[5], temp;
     for (i = 0; i < 5; i++)
