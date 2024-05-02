@@ -8,7 +8,7 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
     setlocale(LC_ALL, "rus");
-    int cp = GetConsoleCP();
+    int cpl = GetConsoleCP();
     const char shapka[] =
         "+-------------------------------------------------------------------+\n"
         "|   |                 |               |           Ёмкость           |\n"
@@ -65,7 +65,7 @@ int main()
     temp = cdiscs[0];
     cdiscs[0] = cdiscs[4];
     cdiscs[4] = temp;
-    SetConsoleCP(cp);
+    SetConsoleCP(cpl);
     printf("\n\n%s", shapka);
     SetConsoleCP(1251);
     for (i = 0; i < 5; i++)
